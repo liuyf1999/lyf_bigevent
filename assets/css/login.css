@@ -8,14 +8,16 @@ body {
   background-size: cover;
 }
 
-.loginAndRegBox {
-  width: 400px;
-  height: 310px;
-  background-color: #fff;
+.login {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 400px;
+  height: 310px;
+  background-color: #fff;
   transform: translate(-50%, -50%);
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .title-box {
@@ -27,17 +29,9 @@ body {
   display: none;
 }
 
-.layui-form {
-  padding: 0 30px;
-}
-
 .links {
   display: flex;
   justify-content: flex-end;
-}
-
-.links a {
-  font-size: 12px;
 }
 
 .layui-form-item {
@@ -46,10 +40,10 @@ body {
 
 .layui-icon {
   position: absolute;
-  left: 10px;
   top: 10px;
+  left: 10px;
 }
 
 .layui-input {
-  padding-left: 32px;
+  padding-left: 40px;
 }
