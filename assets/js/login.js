@@ -1,5 +1,6 @@
 $(function () {
-
+  // 退回login后,清楚本地存储数据
+  localStorage.removeItem('token')
   // 跳转到注册
   $("#link_reg").on('click', function () {
     $(".login-box").hide();

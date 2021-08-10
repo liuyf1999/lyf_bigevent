@@ -13,9 +13,8 @@ $(function () {
         });
     })
 })
-
+var data = {};
 // 获取用户基本信息
-
 function getUserInfo() {
     $.ajax({
         method: 'get',
@@ -24,11 +23,14 @@ function getUserInfo() {
             if (res.status !== 0) {
                 return layui.layer.msg('获取用户信息失败!')
             }
-
             //调用renderAvatar 渲染用户头像
             renderAvatar(res.data)
-        }
+            data = res.data
+        },
+        async: false
     })
+    return data;
+
 }
 
 // 渲染用户头像
@@ -50,5 +52,4 @@ function renderAvatar(user) {
         var first = name[0].toUpperCase()
         $(".text-avatar").html(first).show()
     }
-
 }
